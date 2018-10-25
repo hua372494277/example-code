@@ -1,7 +1,7 @@
 from array import array
 from random import random
 
-floats1 = array('d', (random() for i in range(10**7)))
+floats1 = array('d', (random() for i in range(10**3)))
 print(floats1[-1])
 
 fp = open('floats.bin', 'wb')
@@ -15,7 +15,7 @@ fp.close()
 
 floats2 = array('d')
 fp = open('floats.bin', 'rb')
-floats2.fromfile(fp, 10**7)
+floats2.fromfile(fp, 10**3)
 fp.close()
 print(floats2[-1])
 
